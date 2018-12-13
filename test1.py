@@ -75,59 +75,60 @@
 #     print('E')
 
 
-# # 求1-5阶乘之和
+# 求1-5阶乘之和
 # s = 1
-# for a in range(1,5):
+# for a in range(1, 6):
 #     s *= a
 # print(s)
 
 
 # 给一个数，判断是否是素数（质数）质数：被1和它本身整除的自然数
 # b = int(input('输入一个数'))
-# for i1 in range(2, b):
-#     if b % i1 == 0:
+# for i in range(2, b):
+#     if b % i == 0:
 #         print('%d 不是素数' % b)
 #         break
 # else:
 #     print('%d is a prime number！' % b)
 
 
-# # 打印九九乘法表
-# for i in range(1,10):
-#     for j in range(1,i+1):
-#         print(j, '*', i, '=', j*i, '\t', end='')
-#     print()
+# 打印九九乘法表
+for i in range(1, 10):
+    for j in range(1, i+1):
+        print(j, '*', i, '=', j*i, '\t', end='')
+    print()
 
 
-# # 打印菱形
-n = int(input('输入菱形行数'))
-for i in range(1, n):
-    for j in range(1, n-i):
+# 打印菱形
+n = int(input('输入菱形边长'))
+for i in range(1, n+1):      # i循环行数
+    for j in range(1, n+1-i):  # j空格个数
         print(' ', end='')
-    for k in range(2*i-1):
+    for k in range(2*i-1):   # k *个数
         print('*', end='')
     print('')
 # 菱形的下半部分
 for i in range(1, n):
     for j in range(i):
         print(' ', end='')
-    for k in range(1, 2*(n-i)-2):
+    for k in range(1, 2*(n-i)):
         print('*', end='')
     print('')
 
-# # 打印100以内的斐波那契数列
-# n1 = 1
-# n2 = 1
-# count = 2
-# print(n1, ',', n2, end=' , ')
-# while count <= 100:
-#     nth = n1 + n2
-#     print(nth, end=' , ')
-#     n1 = n2
-#     n2 = nth
-#     count += 1
-#     if nth > 100:
-#         break
+
+# 打印100以内的斐波那契数列
+n1 = 1
+n2 = 1
+count = 2
+print(n1, ',', n2, end=' , ')
+while count <= 100:
+    nth = n1 + n2
+    if nth > 100:
+        break
+    print(nth, end=' , ')
+    n1 = n2
+    n2 = nth
+    count += 1
 
 
 # 斐波那契数列第101项
